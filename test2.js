@@ -25,4 +25,13 @@ const electronics = products.filter(
 
 const expensiveProducts = products.filter((product) => product.price > 300);
 //console.log("Expensive Products:", expensiveProducts);
-console.
+
+const goodProducts = products.filter((product) => product.rating >= 4.5);
+//goodProducts.forEach((goodProduct) => console.log(goodProduct.name));
+
+const cheapElectronics = products.filter(
+  (product) => product.price < 1000 && product.category === "Electronics"
+);
+cheapElectronics.forEach((cheapElectronic) =>
+  console.log(cheapElectronic.name, cheapElectronic.price)
+);
